@@ -1,0 +1,404 @@
+/* ===== Reset & Base ===== */
+
+/* Reset margin, padding and set box-sizing to border-box for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set default font */
+  line-height: 1.7; /* Set line height */
+  background: #f9f9f9; /* Light background color */
+  color: #333; /* Default text color */
+}
+
+/* Headings weight */
+h1, h2, h3, h4, h5 {
+  font-weight: 700; /* Make headings bold */
+}
+
+/* Links styling */
+a {
+  text-decoration: none; /* Remove underline */
+  transition: 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* ===== Top Header ===== */
+
+/* Top header background and text */
+.top-header {
+  background: #0e37a8; /* Dark blue */
+  color: white;
+  font-size: 15px; /* Text size */
+}
+
+/* Icons spacing */
+.top-header i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+/* Hover effect for top header links */
+.top-header a:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+/* Responsive top header for small screens */
+@media (max-width: 768px) {
+  .top-header {
+    text-align: center; /* Center text */
+    font-size: 14px;  
+    padding: 8px 0; /* Vertical padding */
+  }
+  .top-header .col-md-6 {
+    margin-bottom: 5px; /* Space between columns */
+  }
+  .top-header .col-md-6:last-child {
+    margin-bottom: 0; /* Remove bottom margin for last column */
+  }
+}
+
+/* ===== Navbar ===== */
+
+/* Navbar background and shadow */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Light shadow */
+  padding: 10px 20px;
+}
+
+/* Logo image sizing */
+.navbar-brand img {
+  height: 80px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Navbar link styles */
+.navbar .nav-link {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 10px; /* Horizontal spacing */
+}
+
+/* Navbar link hover and active effect */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #2464c4 !important; /* Blue color */
+  font-weight: bold; /* Bold text */
+}
+
+/* ===== Hero Carousel ===== */
+
+/* Hero section height */
+.hero {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Carousel images fit */
+.hero .carousel-item img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover; /* Cover the entire area */
+}
+
+/* Overlay on hero images */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.25); /* Semi-transparent overlay */
+}
+
+/* ===== About Section ===== */
+
+/* About section padding and background */
+.about {
+  padding: 80px 0;
+  background: #fff;
+}
+
+/* About section main heading */
+.about h1 {
+  color: #003366; /* Dark blue */
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Underline decoration for heading */
+.about h1::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #3228b6; /* Blue underline */
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* About text paragraph */
+.about p {
+  max-width: 800px; /* Limit width */
+  margin: auto; /* Center */
+  font-size: 1.1rem;
+  color: #393939;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* About images styling */
+.about img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Shadow */
+  transition: transform 0.4s; /* Smooth hover effect */
+  display: block;
+  margin: auto;
+}
+
+/* Hover effect for about images */
+.about img:hover {
+  transform: scale(1.01); /* Slight zoom on hover */
+}
+
+/* ===== Vision & Mission ===== */
+
+/* Vision & Mission section background with gradient animation */
+.vision-mission-section {
+  background: linear-gradient(135deg, #004d7a, #008793, #00bf72);
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite; /* Animated gradient */
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Vision & Mission heading */
+.vision-mission-section h2 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+}
+
+/* Vision & Mission paragraph */
+.vision-mission-section p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Services Section ===== */
+
+/* Services section background and padding */
+.services-section {
+  background: #f0f8ff; /* Light blue */
+  padding: 80px 20px;
+}
+
+/* Services heading color and spacing */
+.services-section h2 {
+  color: #0e76a8;
+  margin-bottom: 50px;
+}
+
+/* Individual service box */
+.service-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease; /* Smooth hover */
+}
+
+/* Service box hover effect */
+.service-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  background-color: #f4f9ff;
+}
+
+/* Service icon size and color */
+.service-icon {
+  font-size: 32px;
+  color: #aeca0f;
+  margin-right: 15px;
+}
+
+/* Service images size */
+.service-box img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+/* Service text */
+.service-box p {
+  color: #0e76a8;
+  font-size: 18px;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive services section */
+@media (max-width: 768px) {
+  .services-section h2 {
+    font-size: 30px;
+  }
+  .service-box {
+    padding: 12px;
+    margin: 0 -19px;
+  }
+  .service-box img,
+  .service-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .service-box p {
+    font-size: 18px;
+  }
+}
+
+/* ===== Quote Modal ===== */
+
+/* Modal content style */
+.modal-content {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Modal header rounded corners */
+.modal-header {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Modal form controls */
+.modal .form-control {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+/* Modal form focus effect */
+.modal .form-control:focus {
+  border-color: #0e76a8;
+  box-shadow: 0 0 0 0.2rem rgba(14,118,168,0.25);
+}
+
+/* ===== Thank You Modal ===== */
+
+/* Modal content styling */
+.thank-you-modal .modal-content {
+  background: #0e76a8;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Slide-in animation for modal */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Thank you modal button */
+.thank-you-modal .btn-light {
+  color: #0e76a8;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* ===== Footer ===== */
+
+/* Footer background and text */
+footer {
+  background-color: #003366;
+  color: #e9e6e6;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 15px;
+}
+
+/* Footer links */
+footer a {
+  color: #0e76a8;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {  
+  footer {
+    font-size: 11px;
+  }
+}
+
+/* ===== Floating Buttons ===== */
+
+/* Floating buttons container */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Space between buttons */
+}
+
+/* Individual floating button style */
+.floating-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+}
+
+/* Floating button hover effect */
+.floating-btn a:hover {
+  transform: scale(1.1); /* Slight enlarge */
+  text-decoration: none;
+}
+
+/* WhatsApp button color */
+.floating-btn a.whatsapp {
+  background-color: #25D366;
+}
+
+/* Call button color */
+.floating-btn a.call {
+  background-color: #007bff;
+}
+
+/* ===== Smooth Scroll ===== */
+
+/* Smooth scroll behavior for the page */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for fixed navbar */
+}
